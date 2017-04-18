@@ -11,7 +11,7 @@ class SmartsController < ApplicationController
 		@value = params[:search]	
 		@arr = Array.new()
 
-		@agent = Mechanize.new
+		#@agent = Mechanize.new
 
 		# get the HTML from the website
 		if(@value == nil)
@@ -20,9 +20,9 @@ class SmartsController < ApplicationController
 			uri  = URI("http://tratu.soha.vn/dict/en_vn/" + @value)
 			body = Net::HTTP.get(uri)
 
-			url_img = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1290&bih=634&q=" + @value.to_s + "&oq=" + @value.to_s + "&gs_l=img.3..35i39k1j0l"
-			@page_img = @agent.get url_img
-			binding.pry
+			# url_img = "https://www.google.com/search?site=&tbm=isch&source=hp&biw=1290&bih=634&q=" + @value.to_s + "&oq=" + @value.to_s + "&gs_l=img.3..35i39k1j0l"
+			# @page_img = @agent.get url_img
+			# binding.pry
 			# #bodyImage = Net::HTTP.get(uriImage)
 			# binding.pry
 			# htmlImage = Nokogiri::HTML(open(uriImage))
