@@ -1,0 +1,19 @@
+
+
+<% (0..4).each do |idx| %>
+            <img src="<%= @page_img.search("img")[idx].attribute("src").text %>" alt="pictures" >
+
+        <% end %>
+
+      
+<div class="row">
+  <p style="font-size: 20px; font-weight: bold; color: blue; margin-left: 300px; margin-top: 50px">
+    <%= @title %>
+  </p>
+
+  <p style="font-size: 15px; font-weight: italic; margin-left: 350px; margin-top: 10px">
+    <% @arr.each do |a| %>
+      <%= a.gsub(/\n/, '<br/>').html_safe %>
+    <% end %>   
+  </p>    
+</div>   
