@@ -1,7 +1,17 @@
 
-
-
+<!--show image-->
+<div class="row">
+  <p style="margin-left: 300px; margin-top: 40px">
+    <% count = 1 %>
+    <% @images.each do |image| %>
+      <%= image_tag image.values[1] %>
+      <% count += 1 %>
+      <% break if count == 5 %>
+    <% end %>
+  </p>  
+</div>
       
+<!--show content-->      
 <div class="row">
   <p style="font-size: 20px; font-weight: bold; color: blue; margin-left: 300px; margin-top: 50px">
     <%= @title %>
